@@ -1,12 +1,12 @@
 var cols, rows;
-var w =2.5;
+var w =20;
 var cells = [];
 var currentCell;
 var doneCels = []
 
 function setup() {
   
-  createCanvas(100, 100);
+  createCanvas(500, 500);
   cols = floor(width/w)
   rows = floor(height/w)
   
