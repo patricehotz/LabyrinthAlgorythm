@@ -6,7 +6,7 @@ var doneCels = []
 
 function setup() {
   
-  createCanvas(1000, 1000);
+  createCanvas(100, 100);
   cols = floor(width/w)
   rows = floor(height/w)
   
@@ -28,10 +28,10 @@ function setup() {
 
 
 function draw() {
-//      background(55);
-//  for(var i = 0; i < cells.length; i++){
-//      cells[i].show();
-//  }
+      background(55);
+  for(var i = 0; i < cells.length; i++){
+      cells[i].show();
+  }
 
   var prozent = ((doneCels.length / (rows * cols)) * 100)
   if(prozent % 1 == 0)
@@ -131,12 +131,12 @@ function Cell(x, y){
       {
         line(i, j + w, i + w, j + w)
       }
-  //  if(this.visited === true)
-  //    {
-  //      noStroke()
-  //      fill(255, 0, 255, 100)
-  //      rect(i, j, w, w)
-  //    }
+    if(this.visited === true)
+      {
+        noStroke()
+        fill(255, 0, 255, 100)
+        rect(i, j, w, w)
+      }
     if(this == currentCell)
       {
         fill(255, 100, 255, 100)
